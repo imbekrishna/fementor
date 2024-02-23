@@ -46,8 +46,9 @@ img {
   border-radius: 1.2em;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.3em;
   align-items: center;
+  box-shadow: 3px 3px 25px 1px rgba(0, 0, 0, 0.267);
 }
 
 .card img {
