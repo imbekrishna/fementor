@@ -1,0 +1,99 @@
+:root {
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey: hsl(0, 0%, 50%);
+  --clr-black: hsl(0, 0%, 7%);
+
+  --ff-primary: 'Figtree', sans-serif;
+
+  --fs-small: 0.75rem;
+  --fs-normal: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-yellow);
+}
+
+.card {
+  max-width: 400px;
+  margin: 1.5rem;
+  padding: 1.2em;
+  background-color: white;
+  border: 2px solid var(--clr-black);
+  border-radius: 1em;
+  box-shadow: 8px 8px 0 2px var(--clr-black);
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  border-radius: 0.8em;
+}
+
+.card-body {
+  margin-block: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.tag {
+  width: fit-content;
+  padding: 0.5em 1em;
+  font-size: var(--fs-small);
+  font-weight: bold;
+  font-style: inherit;
+  border-radius: 0.3em;
+  background-color: var(--clr-yellow);
+}
+
+time {
+  font-size: var(--fs-small);
+}
+
+.card-body h1 {
+  font-size: 1.2rem;
+  color: var(--clr-black);
+}
+
+.card-body p {
+  color: var(--clr-grey);
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+}
+
+.author-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-weight: bold;
+  font-size: var(--fs-small);
+}
+
+.author-container img {
+  width: 40px;
+}
+
+@media screen and (min-width: 376px) {
+  .card-body h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-body p {
+    font-size: 14px;
+  }
+}
