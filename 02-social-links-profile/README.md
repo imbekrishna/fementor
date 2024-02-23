@@ -4,7 +4,7 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 
 [Check it out here](https://imbekrishna.github.io/fementor/02-social-links-profile/)
 
-![Design preview for the Social Links Profile coding challenge](./design/desktop-design.jpg)
+![Design preview for the Social Links Profile coding challenge](./design/destkop-design.jpg)
 
 ## Built with
 
