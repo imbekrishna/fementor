@@ -1,0 +1,233 @@
+:root {
+  --clr-nutmeg: hsl(14, 45%, 36%);
+  ---clr-dark-raspberry: hsl(332, 51%, 32%);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-rose-white: hsl(330, 100%, 98%);
+  --clr-eggshell: hsl(30, 54%, 90%);
+  --clr-light-grey: hsl(30, 18%, 87%);
+  --clr-wenge-brown: hsl(30, 10%, 34%);
+  --clr-dark-charcoal: hsl(24, 5%, 18%);
+
+  --ff-young-serif: 'Young Serif', serif;
+  --ff-outfit: 'Outfit', sans-serif;
+
+  --fw-normal: 400;
+  --fw-semi: 600;
+  --fw-bold: 700;
+}
+
+/* #region General reset */
+
+/* source: https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* #endregion */
+
+body {
+  font-family: var(--ff-outfit);
+  color: var(--clr-wenge-brown);
+}
+ul,
+ol {
+  padding-left: 1.5em;
+}
+
+li {
+  padding-left: 1.2em;
+  margin-block: 0.5em;
+}
+
+li::marker {
+  font-family: var(--ff-outfit);
+  font-weight: bold;
+  color: var(--clr-nutmeg);
+}
+
+section {
+  padding-block-end: 1em;
+}
+
+section:last-of-type {
+  padding-block-end: 0;
+}
+
+.recipe-card {
+  max-width: 700px;
+  background-color: var(--clr-white);
+}
+
+.recipe-card-body {
+  margin-inline: 1.9rem;
+}
+
+.recipe-card-body section + section {
+  border-top: 1px solid var(--clr-light-grey);
+}
+
+.section-title {
+  font-family: var(--ff-young-serif);
+  color: var(--clr-nutmeg);
+  font-weight: var(--fw-normal);
+  font-size: 1.7rem;
+  margin-block: 1em;
+}
+
+.list-title {
+  font-weight: var(--fw-bold);
+}
+
+.recipe-timings {
+  margin-block: 2rem;
+  padding: 1em 1.5rem;
+  background-color: var(--clr-rose-white);
+  border-radius: 1em;
+}
+
+.recipe-timings p {
+  color: var(---clr-dark-raspberry);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.recipe-timings li::mark {
+  color: var(---clr-dark-raspberry);
+}
+
+.recipe-name {
+  color: var(--clr-dark-charcoal);
+  margin-bottom: 1.5rem;
+  font-size: 2.3rem;
+  word-wrap: break-word;
+}
+
+.nutrition-table {
+  margin-block: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr + tr {
+  border-top: 1px solid var(--clr-light-grey);
+}
+
+td {
+  padding-block: 0.7rem;
+}
+
+tr td:first-of-type {
+  padding-inline-start: 2em;
+}
+
+tr td:last-of-type {
+  font-weight: var(--fw-bold);
+  color: var(--clr-nutmeg);
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 3rem;
+    background-color: var(--clr-eggshell);
+  }
+
+  .recipe-card {
+    padding: 1.9em 1.9rem 0;
+    border-radius: 1rem;
+  }
+
+  .recipe-img {
+    border-radius: 0.7rem;
+  }
+
+  .recipe-name {
+    margin-block-start: 2rem;
+  }
+
+  .recipe-card-body {
+    margin: inherit;
+  }
+}

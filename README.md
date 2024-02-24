@@ -5,6 +5,7 @@
 1.  [QR Code Component](https://imbekrishna.github.io/fementor/01-qr-code-component)
 2.  [Social Links Profile](https://imbekrishna.github.io/fementor/02-social-links-profile)
 3.  [Blog Preview Card](https://imbekrishna.github.io/fementor/03-blog-preview-card)
+4.  [Recipe Page](https://imbekrishna.github.io/fementor/04-recipe-page)
 
 ## Author
 
