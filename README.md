@@ -6,6 +6,7 @@
 2.  [Social Links Profile](https://imbekrishna.github.io/fementor/02-social-links-profile)
 3.  [Blog Preview Card](https://imbekrishna.github.io/fementor/03-blog-preview-card)
 4.  [Recipe Page](https://imbekrishna.github.io/fementor/04-recipe-page)
+5.  [Product Preview Card](https://imbekrishna.github.io/fementor/05-product-preview-card)
 
 ## Author
 

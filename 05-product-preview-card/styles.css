@@ -1,0 +1,216 @@
+:root {
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-dark-active: hsl(158, 42%, 18%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-very-dark-blue: hsl(212, 21%, 14%);
+  --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-sans: 'Montserrat', sans-serif;
+  --ff-serif: 'Fraunces', serif;
+
+  --fs-normal: 14px;
+  --fs-large: 32px;
+
+  --fw-normal: 400;
+  --fw-semi: 500;
+  --fw-bold: 700;
+}
+
+/* #region General reset */
+
+/* source: https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* #endregion */
+
+body {
+  background-color: var(--clr-cream);
+  font-family: var(--ff-sans);
+  font-size: var(--fs-normal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  max-width: 600px;
+  background-color: var(--clr-white);
+  margin-inline: 1rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.card-body {
+  background-color: var(--clr-white);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tag {
+  color: var(--clr-dark-grayish-blue);
+  letter-spacing: 0.2rem;
+  font-size: small;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-large);
+  margin-block: 0.3em;
+  color: var(--clr-very-dark-blue);
+}
+
+.description {
+  color: var(--clr-dark-grayish-blue);
+  font-weight: var(--fw-semi);
+}
+
+.price-div {
+  margin-block: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sale-price {
+  font-size: var(--fs-large);
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-bold);
+  color: var(--clr-dark-cyan);
+}
+
+.original-price {
+  color: var(--clr-dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.cta-button {
+  width: 100%;
+  padding-block: 0.8rem;
+  font-family: inherit;
+  font-weight: var(--fw-bold);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--clr-dark-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background 100ms ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: var(--clr-dark-active);
+}
+
+@media screen and (min-width: 600px) {
+  .product-card {
+    display: flex;
+  }
+
+  .img-container {
+    flex: 1;
+    height: 100%;
+    max-width: 50%;
+  }
+
+  .price-div {
+    margin: 0;
+  }
+
+  .card-body {
+    max-width: 50%;
+    padding: 1.5rem 2rem;
+    flex: 1;
+    justify-content: space-evenly;
+    background-color: var(--clr-white);
+  }
+}
