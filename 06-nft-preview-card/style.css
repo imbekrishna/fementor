@@ -1,0 +1,185 @@
+:root {
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+
+  --clr-bg-main: hsl(217, 54%, 11%);
+  --clr-bg-card: hsl(216, 50%, 16%);
+  --clr-line: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-sans: 'Outfit', sans-serif;
+
+  --fs-normal: 18px;
+  --fs-large: 22px;
+
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-semi: 600;
+}
+
+/* #region General reset */
+
+/* source: https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* #endregion */
+
+body {
+  font-family: var(--ff-sans);
+  color: var(--clr-soft-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-bg-main);
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-light);
+}
+
+.card {
+  max-width: 370px;
+  padding: 1.2em;
+  margin-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--clr-bg-card);
+  border-radius: 0.8em;
+}
+
+.img--container {
+  position: relative;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.hover--overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(178 100% 50% / 0.4);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 50ms ease-in-out;
+}
+
+.hover--overlay:hover {
+  opacity: 1;
+}
+
+.card--title {
+  font-size: var(--fs-large);
+  padding-top: 0.7rem;
+}
+
+.card--title {
+  color: var(--clr-white);
+  font-weight: var(--fw-semi);
+}
+
+.card--meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card--meta > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.price--div {
+  color: var(--clr-cyan);
+  font-weight: var(--fw-semi);
+}
+
+.card--author {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--clr-soft-blue);
+  font-weight: var(--fw-normal);
+  border-top: 1px solid var(--clr-line);
+}
+
+.card--author > img {
+  width: 2.5rem;
+  border: 1px solid var(--clr-white);
+  border-radius: 50%;
+}
+
+.author--name {
+  color: var(--clr-white);
+}
+
+.card--title:hover,
+.author--name:hover {
+  color: var(--clr-cyan);
+  cursor: pointer;
+}

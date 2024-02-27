@@ -4,7 +4,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 [Check it out here](https://imbekrishna.github.io/fementor/05-product-preview-card/)
 
-![Design preview for the Recipe Page coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Product Preview Card Component challenge](./design/desktop-preview.jpg)
 
 ## Built with
 
