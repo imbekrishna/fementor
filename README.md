@@ -8,6 +8,7 @@
 4.  [Recipe Page](https://imbekrishna.github.io/fementor/04-recipe-page)
 5.  [Product Preview Card](https://imbekrishna.github.io/fementor/05-product-preview-card)
 6.  [NFT Product Preview Card](https://imbekrishna.github.io/fementor/06-nft-preview-card/)
+7.  [Age Calculator App](https://age-calc.pages.dev/)
 
 ## Author
 
