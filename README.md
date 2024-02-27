@@ -7,6 +7,7 @@
 3.  [Blog Preview Card](https://imbekrishna.github.io/fementor/03-blog-preview-card)
 4.  [Recipe Page](https://imbekrishna.github.io/fementor/04-recipe-page)
 5.  [Product Preview Card](https://imbekrishna.github.io/fementor/05-product-preview-card)
+6.  [NFT Product Preview Card](https://imbekrishna.github.io/fementor/06-nft-preview-card/)
 
 ## Author
 
