@@ -7,9 +7,10 @@
 3.  [Blog Preview Card](https://imbekrishna.github.io/fementor/03-blog-preview-card)
 4.  [Recipe Page](https://imbekrishna.github.io/fementor/04-recipe-page)
 5.  [Product Preview Card](https://imbekrishna.github.io/fementor/05-product-preview-card)
-6.  [NFT Product Preview Card](https://imbekrishna.github.io/fementor/06-nft-preview-card/)
+6.  [NFT Product Preview Card](https://imbekrishna.github.io/fementor/06-nft-preview-card)
 7.  [Age Calculator App](https://age-calc.pages.dev/)
 8.  [Todo App](https://fem-todo.pages.dev/)
+9.  [Newsletter sign-up form with success message](https://imbekrishna.github.io/fementor/09-newsletter-sign-up)
 
 ## Author
 

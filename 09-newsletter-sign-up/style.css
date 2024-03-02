@@ -1,0 +1,292 @@
+/* #region General reset */
+
+/* source: https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+  font-family: inherit;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* #endregion */
+
+:root {
+  --clr-pink: hsl(330, 71%, 57%);
+  --clr-tomato: 4, 100%, 67%;
+  --clr-tomato-hsl: rgb(255, 98, 87);
+  --clr-dark-slate-grey: #242742;
+  --clr-charcoal-grey: hsl(235, 18%, 26%);
+  --clr-grey: hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-primary: 'Roboto', sans-serif;
+  --fw-bold: 700;
+}
+
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-dark-slate-grey);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+  list-style-position: outside;
+}
+
+ul > li + li {
+  margin-block-start: 0.5rem;
+}
+
+li {
+  display: flex;
+  align-items: start;
+}
+
+li::before {
+  content: '';
+  margin-inline-end: 0.8rem;
+  margin-block-start: 0.2rem;
+  width: 1.3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: white;
+  background-image: url('./assets/images/icon-list.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+input,
+button {
+  width: 100%;
+  border: none;
+  padding-block: 1.2em;
+  padding-inline: 0.5em;
+  border-radius: 8px;
+}
+
+input {
+  text-indent: 1em;
+  border: 1px solid var(--clr-grey);
+}
+
+input:hover,
+button:hover {
+  cursor: pointer;
+  border-color: var(--clr-dark-slate-grey);
+}
+
+button {
+  color: var(--clr-white);
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-dark-slate-grey);
+}
+
+button:hover {
+  background: linear-gradient(to right, var(--clr-pink), var(--clr-tomato-hsl));
+  box-shadow: 0px 18px 15px -3px rgba(255, 98, 87, 0.3);
+}
+
+.page-info {
+  flex: 1;
+  padding-inline: 1.5em;
+  padding-block: 2.5em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.page-info h1 {
+  font-size: 2.6rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.input-top {
+  margin-block-end: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: var(--fw-bold);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-message {
+  color: hsl(var(--clr-tomato));
+}
+
+input.error::placeholder {
+  color: hsl(var(--clr-tomato));
+}
+
+input.error {
+  color: hsl(var(--clr-tomato));
+  border-color: hsl(var(--clr-tomato));
+  background-color: hsl(var(--clr-tomato), 0.15);
+}
+
+.page-form button {
+  margin-block-start: 1.2rem;
+}
+
+/* #region Success Modal */
+
+.modal {
+  height: 100vh;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-body {
+  margin-top: 33%;
+}
+
+.modal-body img {
+  width: 3.5rem;
+}
+
+.modal-body h1 {
+  font-size: 2.5rem;
+  margin-block: 2rem;
+}
+
+.modal-body .email {
+  font-weight: var(--fw-bold);
+}
+
+/* #endregion */
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-dark-slate-grey);
+  }
+
+  main {
+    max-width: 900px;
+    height: min-content;
+    border-radius: 2em;
+    background-color: var(--clr-white);
+    padding: 1em;
+  }
+
+  .hero-img {
+    border-radius: 1.5em;
+  }
+
+  /* #region modal */
+
+  .modal {
+    background-color: white;
+    height: min-content;
+    max-width: 460px;
+    border-radius: 2em;
+    padding: 3em;
+    gap: 1.5em;
+  }
+
+  .modal-body {
+    margin: 0;
+  }
+
+  /* #endregion */
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    border-radius: 2em;
+    padding: 1em;
+    flex-direction: row;
+  }
+
+  .hero-img {
+    border-radius: 0;
+  }
+
+  .page-info {
+    order: -1;
+    justify-content: center;
+    padding-inline: 2.5em;
+    gap: 1.3rem;
+  }
+
+  .page-info h1 {
+    font-size: 3.3rem;
+  }
+}
