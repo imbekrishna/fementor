@@ -1,3 +1,6 @@
 [submodule "08-todo-app"]
 	path = 08-todo-app
 	url = git@github.com:imbekrishna/fem-todo-app.git
+[submodule "10-rest-countries-api"]
+	path = 10-rest-countries-api
+	url = git@github.com:imbekrishna/rest-countries.git
