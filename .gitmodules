@@ -4,3 +4,6 @@
 [submodule "10-rest-countries-api"]
 	path = 10-rest-countries-api
 	url = git@github.com:imbekrishna/rest-countries.git
+[submodule "07-age-calculator-app"]
+	path = 07-age-calculator-app
+	url = git@github.com:imbekrishna/age-calculator.git
