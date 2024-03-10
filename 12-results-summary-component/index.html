@@ -27,7 +27,7 @@
       <div class="hero">
         <h1 class="title">Your Result</h1>
         <div class="total">
-          <p class="average">76</p>
+          <p class="average">00</p>
           <p class="out-of">of 100</p>
         </div>
         <p class="status">Great</p>
@@ -38,15 +38,28 @@
       <div class="summary">
         <h2>Summary</h2>
         <div class="topics">
-          <div class="topic">
-            <img
-              src="./assets/images/icon-reaction.svg"
-              alt=""
-              class="topic-icon"
-            />
-            <p class="topic-name">Reaction</p>
+          <div class="topic reaction">
+            <p class="topic-name"></p>
             <p class="topic-score">
-              <span class="obtained">80</span> / <span class="marks">100</span>
+              <span class="obtained">--</span> / <span class="marks">--</span>
+            </p>
+          </div>
+          <div class="topic memory">
+            <p class="topic-name"></p>
+            <p class="topic-score">
+              <span class="obtained">--</span> / <span class="marks">--</span>
+            </p>
+          </div>
+          <div class="topic verbal">
+            <p class="topic-name"></p>
+            <p class="topic-score">
+              <span class="obtained">--</span> / <span class="marks">--</span>
+            </p>
+          </div>
+          <div class="topic visual">
+            <p class="topic-name"></p>
+            <p class="topic-score">
+              <span class="obtained">--</span> / <span class="marks">--</span>
             </p>
           </div>
         </div>
@@ -56,14 +69,26 @@
 
     <script>
       const topicsEl = document.querySelector(".topics");
+      const averageEl = document.querySelector(".average");
 
       window.addEventListener("load", (e) => {
         fetch("data.json")
           .then((res) => res.json())
-          .then((data) => addScores(data));
+          .then((data) => {
+            setAverage(data);
+            addScores(data);
+          });
       });
 
+      function setAverage(data) {
+        const total = data.reduce((prev, current) => prev + current.score, 0);
+        const avg = Math.round(total / data.length);
+
+        averageEl.textContent = avg;
+      }
+
       function addScores(topicsData) {
+        console.log(topicsData);
         const topics = topicsData.map((item) =>
           createTopicItem(item.category, item.score, item.icon)
         );
