@@ -10,3 +10,6 @@
 [submodule "11-ip-address-tracker"]
 	path = 11-ip-address-tracker
 	url = git@github.com:imbekrishna/ip-address-tracker.git
+[submodule "13-static-job-listings"]
+	path = 13-static-job-listings
+	url = git@github.com:imbekrishna/job-listing.git

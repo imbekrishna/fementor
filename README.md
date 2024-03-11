@@ -14,6 +14,7 @@
 10. [Rest Countries API](https://rest-countries-1pj.pages.dev/)
 11. [IP Address Tracker](https://ip-loc.pages.dev/)
 12. [Results Summary Component](https://imbekrishna.github.io/fementor/12-results-summary-component)
+13. [Static Job Listing](https://job-listing.pages.dev/)
 
 ## Author
 
